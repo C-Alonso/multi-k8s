@@ -11,10 +11,10 @@ script:
 language: generic
 
 after_success:
-    - docker build -t carlosalonsogtz/multi-client ./client
-    - docker build -t carlosalonsogtz/multi-nginx ./nginx
-    - docker build -t carlosalonsogtz/multi-server ./server
-    - docker build -t carlosalonsogtz/multi-worker ./worker
+    - docker build carlosalonsogtz/multi-client ./client
+    - docker build carlosalonsogtz/multi-nginx ./nginx
+    - docker build carlosalonsogtz/multi-server ./server
+    - docker build carlosalonsogtz/multi-worker ./worker
     # Log in to the docker CLI
     - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin docker.io
     #Take those images and push them to Docker hub.
