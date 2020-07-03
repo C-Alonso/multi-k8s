@@ -6,7 +6,7 @@ before_install:
     - docker build -t carlosalonsogtz/react-test -f ./client/Dockerfile.dev ./client
     
 script:
-    - docker run -e CI=true carlosalonsogtz/docker-react npm run test
+    - docker run -e CI=true carlosalonsogtz/react-test npm run test
 
 language: generic
 
